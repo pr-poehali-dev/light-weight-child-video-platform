@@ -27,12 +27,20 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        minecraft: {
+          grass: "#7CB342",
+          dirt: "#8D6E63",
+          stone: "#616161",
+          brown: "#3E2723",
+          oak: "#795548",
+          emerald: "#4CAF50",
+        },
         primary: {
-          DEFAULT: "#8B5CF6",
+          DEFAULT: "#4CAF50",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#FFDEE2",
+          DEFAULT: "#8D6E63",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -70,10 +78,20 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "bounce-game": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "pixel-glow": {
+          "0%, 100%": { boxShadow: "0 0 5px #4CAF50" },
+          "50%": { boxShadow: "0 0 20px #4CAF50, 0 0 30px #4CAF50" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bounce-game": "bounce-game 1s ease-in-out infinite",
+        "pixel-glow": "pixel-glow 2s ease-in-out infinite",
       },
     },
   },
